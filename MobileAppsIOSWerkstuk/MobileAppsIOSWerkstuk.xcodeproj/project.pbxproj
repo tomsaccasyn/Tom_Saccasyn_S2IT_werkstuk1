@@ -16,6 +16,7 @@
 		3F88B6ED208F2F1C00F93AB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F88B6EC208F2F1C00F93AB1 /* main.m */; };
 		3F88B6F7208F2F1C00F93AB1 /* MobileAppsIOSWerkstukTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F88B6F6208F2F1C00F93AB1 /* MobileAppsIOSWerkstukTests.m */; };
 		3F88B702208F2F1C00F93AB1 /* MobileAppsIOSWerkstukUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F88B701208F2F1C00F93AB1 /* MobileAppsIOSWerkstukUITests.m */; };
+		3F9634C820935D4400E9A60B /* Persoon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9634C720935D4400E9A60B /* Persoon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		3F88B6FD208F2F1C00F93AB1 /* MobileAppsIOSWerkstukUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppsIOSWerkstukUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F88B701208F2F1C00F93AB1 /* MobileAppsIOSWerkstukUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileAppsIOSWerkstukUITests.m; sourceTree = "<group>"; };
 		3F88B703208F2F1C00F93AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9634C620935D4400E9A60B /* Persoon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Persoon.h; sourceTree = "<group>"; };
+		3F9634C720935D4400E9A60B /* Persoon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Persoon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				3F88B6EC208F2F1C00F93AB1 /* main.m */,
 				3F076DE3208F9877002B3D6A /* Adress.h */,
 				3F076DE4208F9877002B3D6A /* Adress.m */,
+				3F9634C620935D4400E9A60B /* Persoon.h */,
+				3F9634C720935D4400E9A60B /* Persoon.m */,
 			);
 			path = MobileAppsIOSWerkstuk;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				3F076DE5208F9877002B3D6A /* Adress.m in Sources */,
 				3F88B6ED208F2F1C00F93AB1 /* main.m in Sources */,
 				3F88B6DF208F2F1B00F93AB1 /* AppDelegate.m in Sources */,
+				3F9634C820935D4400E9A60B /* Persoon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
