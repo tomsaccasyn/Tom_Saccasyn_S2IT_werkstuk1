@@ -13,43 +13,38 @@
         <!--Table View Controller-->
         <scene sceneID="R1r-Xj-wyg">
             <objects>
-                <tableViewController id="T01-iN-AkJ" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYh-s2-PuC">
+                <tableViewController id="T01-iN-AkJ" customClass="TableViewController" customModule="MobileAppsIOSWerkstuk" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NYh-s2-PuC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="121" id="bGS-lr-Z9g">
-                                <rect key="frame" x="0.0" y="28" width="375" height="121"/>
+                            <tableViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" textLabel="MYX-SI-PYZ" detailTextLabel="QNB-eP-oQm" rowHeight="105" style="IBUITableViewCellStyleSubtitle" id="bGS-lr-Z9g">
+                                <rect key="frame" x="0.0" y="28" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bGS-lr-Z9g" id="cdh-D8-gM4">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="104.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Voornaam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkX-c5-reJ">
-                                            <rect key="frame" x="16" y="11" width="199" height="49"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MYX-SI-PYZ">
+                                            <rect key="frame" x="16" y="32" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Naam" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec0-2s-HMv">
-                                            <rect key="frame" x="16" y="68" width="142" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QNB-eP-oQm">
+                                            <rect key="frame" x="16" y="55.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeS-0C-7gT">
-                                            <rect key="frame" x="195" y="0.0" width="180" height="121"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="noimage"/>
-                                            <connections>
-                                                <segue destination="M0o-Yb-C1w" kind="presentation" id="guL-0I-iTn"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="M0o-Yb-C1w" kind="presentation" identifier="naarScherm2" trigger="accessoryAction" id="ZVm-0h-3WP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -62,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="-434.39999999999998" y="49.925037481259373"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Scherm2-->
         <scene sceneID="Jkj-iv-QDq">
             <objects>
-                <viewController id="M0o-Yb-C1w" sceneMemberID="viewController">
+                <viewController id="M0o-Yb-C1w" customClass="ViewControllerScherm2" customModule="MobileAppsIOSWerkstuk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wcz-m9-NHl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,22 +93,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRs-nU-iou">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="noimage"/>
-                                <connections>
-                                    <segue destination="Mtr-Qq-9xN" kind="presentation" id="CFh-EE-aGz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ifg-K4-Jby">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KqM-dT-EJm">
                                 <rect key="frame" x="0.0" y="386" width="375" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="mapview"/>
-                                <connections>
-                                    <segue destination="mPZ-97-kJi" kind="presentation" id="t3a-RB-PlV"/>
-                                </connections>
-                            </button>
+                            </mapView>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VC4-Xu-5cu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qdr-O3-dbX"/>
@@ -121,20 +108,28 @@
                     <toolbarItems>
                         <barButtonItem title="Back" id="Fsr-bL-yfr">
                             <connections>
-                                <segue destination="T01-iN-AkJ" kind="presentation" id="NKa-ts-KJ8"/>
+                                <segue destination="T01-iN-AkJ" kind="presentation" identifier="vanScherm2" id="NKa-ts-KJ8"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="UIAdress" destination="sCJ-4j-b46" id="z1J-Q0-iWL"/>
+                        <outlet property="UIFoto" destination="VC4-Xu-5cu" id="3xe-Rt-6r9"/>
+                        <outlet property="UIMap" destination="KqM-dT-EJm" id="Zno-80-fEN"/>
+                        <outlet property="UINaam" destination="z31-SD-JkE" id="OgD-GK-Sfj"/>
+                        <outlet property="UITelefoonnummer" destination="wWs-r0-AWP" id="ymD-O5-TkG"/>
+                        <outlet property="UIVoornaam" destination="JYY-LN-mcA" id="yqk-dk-I8Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC6-hl-4TJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="280.80000000000001" y="49.925037481259373"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Map Scherm-->
         <scene sceneID="UhL-nS-nmI">
             <objects>
-                <viewController id="mPZ-97-kJi" sceneMemberID="viewController">
+                <viewController id="mPZ-97-kJi" customClass="ViewControllerMapScherm" customModule="MobileAppsIOSWerkstuk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WSf-x0-L7d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +159,7 @@
                     <toolbarItems>
                         <barButtonItem title="Back" id="Njp-rb-7r1">
                             <connections>
-                                <segue destination="M0o-Yb-C1w" kind="presentation" id="Xk4-Jo-tHO"/>
+                                <segue destination="M0o-Yb-C1w" kind="presentation" identifier="vanMapScherm" id="Xk4-Jo-tHO"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -174,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="1056.8" y="455.62218890554726"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Foto Scherm-->
         <scene sceneID="Xg8-0a-OSu">
             <objects>
-                <viewController id="Mtr-Qq-9xN" sceneMemberID="viewController">
+                <viewController id="Mtr-Qq-9xN" customClass="ViewControllerFotoScherm" customModule="MobileAppsIOSWerkstuk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VR-UD-OIF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -207,7 +202,7 @@
                     <toolbarItems>
                         <barButtonItem title="Back" id="lEe-kj-DVc">
                             <connections>
-                                <segue destination="M0o-Yb-C1w" kind="presentation" id="FFD-c5-FCh"/>
+                                <segue destination="M0o-Yb-C1w" kind="presentation" identifier="vanFotoScherm" id="FFD-c5-FCh"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -218,10 +213,7 @@
             <point key="canvasLocation" x="1068" y="-364.7676161919041"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="noimage" width="16" height="16"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="guL-0I-iTn"/>
+        <segue reference="ZVm-0h-3WP"/>
     </inferredMetricsTieBreakers>
 </document>

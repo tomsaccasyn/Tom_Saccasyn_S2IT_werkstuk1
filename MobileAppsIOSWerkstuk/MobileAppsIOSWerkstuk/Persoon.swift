@@ -19,12 +19,10 @@ class Persoon{
     var Telefoonnummer:Int;
     var Latitude:Double;
     var Longitude:Double;
-    var Altitude:Double;
-    var hAccuracy:Double;
-    var vAccuracy:Double;
     
     
-    init(naam:String,voornaam:String,foto:String,address:Adress,telefoonnummer:Int,latitude:Double,longitude:Double,altitude:Double,haccuracy:Double,vaccuracy:Double) {
+    
+    init(naam:String,voornaam:String,foto:String,address:Adress,telefoonnummer:Int,latitude:Double,longitude:Double) {
         self.Naam=naam;
         self.Voornaam=voornaam;
         self.Foto=foto;
@@ -32,9 +30,7 @@ class Persoon{
         self.Telefoonnummer=telefoonnummer;
         self.Latitude=latitude;
         self.Longitude=longitude;
-        self.Altitude=altitude;
-        self.hAccuracy=haccuracy;
-        self.vAccuracy=vaccuracy;
+      
     }
 
 
