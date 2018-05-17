@@ -8,40 +8,58 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
 
 class ViewControllerScherm2: UIViewController,MKMapViewDelegate {
      var locationManager = CLLocationManager()
-    var temp = Persoon(naam: "", voornaam: "", foto: "", address: Adress(straat:"",huisnummer:0,postcode:0,gemeente:""), telefoonnummer: 0, latitude: 0.0, longitude: 0.0)
+    var personentemp = [Persoon]();
     @IBOutlet weak var UIFoto: UIImageView!
     @IBOutlet weak var UIVoornaam: UILabel!
     @IBOutlet weak var UINaam: UILabel!
     @IBOutlet weak var UIAdress: UILabel!
     @IBOutlet weak var UITelefoonnummer: UILabel!
     @IBOutlet weak var UIMap: MKMapView!
+    var temp : Persoon!
     override func viewDidLoad() {
         super.viewDidLoad()
-        UIFoto.image = UIImage(named:temp.Foto)
+        UIFoto.image = UIImage(named: temp.Foto)
         UIVoornaam.text = temp.Voornaam
         UINaam.text = temp.Naam
         UIAdress.text = temp.Address.Straat + " " + String(temp.Address.Huisnummer) + " " + String(temp.Address.Postcode) + " " + temp.Address.Gemeente
         UITelefoonnummer.text = String(temp.Telefoonnummer)
-        locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
+        
         // Do any additional setup after loading the view.
-        func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-            let center = CLLocationCoordinate2D(latitude: temp.Latitude,longitude:temp.Longitude)
-            let region = MKCoordinateRegion(center:center,span:MKCoordinateSpan(latitudeDelta:0.01,longitudeDelta:0.01))
-            
-            mapView.setRegion(region, animated: true)
-        }
+        
+        locationManager.requestAlwaysAuthorization()
+        
+        locationManager.startUpdatingLocation()
+        let coordinate:CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: temp.Latitude, longitude: temp.Longitude)
+        
+        let annotation:AnnotationPersoon = AnnotationPersoon(coordinate: coordinate, title: temp.Voornaam + " " + temp.Naam)
+        self.UIMap.addAnnotation(annotation)
+        self.UIMap.selectAnnotation(annotation, animated: true)
     }
     
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView ) {
+        let center = CLLocationCoordinate2D(latitude: (view.annotation?.coordinate.latitude)!, longitude: (view.annotation?.coordinate.longitude)!)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+        
+        mapView.setRegion(region, animated: true)
+     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? ViewControllerScherm3
+        {
+            vc.temp3 = personentemp;
+            
+        }
+        
+        
     }
     
 

@@ -10,10 +10,9 @@ import UIKit
 
 class TableViewController: UITableViewController {
     var Personen = [Persoon]();
-    var p1 = Persoon(naam: "Hogeschool Brussel", voornaam: "Erasmus" , foto: "mars1" , address: Adress(straat: "Nijverheidskaai" , huisnummer: 170 , postcode: 1070 , gemeente: "Brussel") , telefoonnummer: 04759949 , latitude: 50.841778 , longitude: 4.322869);
-    var p2 = Persoon(naam: "Zuid" , voornaam: "Brussel" , foto: "mars2" , address: Adress(straat: "Avenue Fonsny" , huisnummer: 47 , postcode: 1060 , gemeente: "Brussel") , telefoonnummer: 0411111111 , latitude: 50.836174 , longitude: 4.335685);
+    var p1 = Persoon(naam: "Hogeschool Brussel", voornaam: "Erasmus" , foto: "ehb" , address: Adress(straat: "Nijverheidskaai" , huisnummer: 170 , postcode: 1070 , gemeente: "Brussel") , telefoonnummer: 04759949 , latitude: 50.841778 , longitude: 4.322869);
+    var p2 = Persoon(naam: "Zuid" , voornaam: "Brussel" , foto: "brusselzuid" , address: Adress(straat: "Avenue Fonsny" , huisnummer: 47 , postcode: 1060 , gemeente: "Brussel") , telefoonnummer: 0411111111 , latitude: 50.836174 , longitude: 4.335685);
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,12 +33,14 @@ class TableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return Personen.count
     }
@@ -53,22 +54,38 @@ class TableViewController: UITableViewController {
         
         cell.textLabel?.text = key
         cell.detailTextLabel?.text = Personen[indexPath.row].Voornaam
-        //cell.imageView?.image = UIImage(named: Personen[indexPath.row].Foto)
+        cell.imageView?.image = UIImage(named: Personen[indexPath.row].Foto)
         
         
         return cell
 
-
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "naarScherm2"
+     
+        if let vc = segue.destination as? ViewControllerScherm2
         {
+            var indexPath = self.tableView.indexPathForSelectedRow
+            vc.temp = Personen[(indexPath?.row)!]
+            vc.personentemp = Personen;
+           
+        }
+       
+        
+    }/*
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }*/
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if (segue.identifier == "naarScherm2")
+        {
+         
             let nextScherm = segue.destination as! ViewControllerScherm2
             let indexPath = self.tableView.indexPathForSelectedRow
             nextScherm.temp = Personen[(indexPath?.row)!]
-            
+ 
         }
-    }
+    }*/
 
     /*
     // Override to support conditional editing of the table view.

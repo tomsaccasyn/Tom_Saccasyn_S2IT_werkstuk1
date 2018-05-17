@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0198DF20ADAB4400CF8696 /* AnnotationPersoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0198DE20ADAB4400CF8696 /* AnnotationPersoon.swift */; };
+		3F0198E120ADC04E00CF8696 /* ViewControllerScherm3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0198E020ADC04E00CF8696 /* ViewControllerScherm3.swift */; };
 		3F459FE020A9E9A90051A244 /* ViewControllerScherm2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F459FDF20A9E9A90051A244 /* ViewControllerScherm2.swift */; };
-		3F459FE220AA04400051A244 /* ViewControllerFotoScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F459FE120AA04400051A244 /* ViewControllerFotoScherm.swift */; };
-		3F459FE420AA04520051A244 /* ViewControllerMapScherm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F459FE320AA04520051A244 /* ViewControllerMapScherm.swift */; };
 		3F4B7BDF20A5A22600ABD1E1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4B7BDE20A5A22600ABD1E1 /* TableViewController.swift */; };
 		3F71A59720A02FB000D05FE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F71A59620A02FB000D05FE0 /* AppDelegate.swift */; };
 		3F71A59920A02FB000D05FE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F71A59820A02FB000D05FE0 /* ViewController.swift */; };
@@ -40,9 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0198DE20ADAB4400CF8696 /* AnnotationPersoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationPersoon.swift; sourceTree = "<group>"; };
+		3F0198E020ADC04E00CF8696 /* ViewControllerScherm3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScherm3.swift; sourceTree = "<group>"; };
 		3F459FDF20A9E9A90051A244 /* ViewControllerScherm2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScherm2.swift; sourceTree = "<group>"; };
-		3F459FE120AA04400051A244 /* ViewControllerFotoScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFotoScherm.swift; sourceTree = "<group>"; };
-		3F459FE320AA04520051A244 /* ViewControllerMapScherm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMapScherm.swift; sourceTree = "<group>"; };
 		3F4B7BDE20A5A22600ABD1E1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		3F71A59320A02FB000D05FE0 /* MobileAppsIOSWerkstuk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppsIOSWerkstuk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F71A59620A02FB000D05FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 				3F71A5C620A0357E00D05FE0 /* Persoon.swift */,
 				3F4B7BDE20A5A22600ABD1E1 /* TableViewController.swift */,
 				3F459FDF20A9E9A90051A244 /* ViewControllerScherm2.swift */,
-				3F459FE120AA04400051A244 /* ViewControllerFotoScherm.swift */,
-				3F459FE320AA04520051A244 /* ViewControllerMapScherm.swift */,
+				3F0198DE20ADAB4400CF8696 /* AnnotationPersoon.swift */,
+				3F0198E020ADC04E00CF8696 /* ViewControllerScherm3.swift */,
 			);
 			path = MobileAppsIOSWerkstuk;
 			sourceTree = "<group>";
@@ -279,12 +279,12 @@
 			files = (
 				3F71A59920A02FB000D05FE0 /* ViewController.swift in Sources */,
 				3F459FE020A9E9A90051A244 /* ViewControllerScherm2.swift in Sources */,
+				3F0198E120ADC04E00CF8696 /* ViewControllerScherm3.swift in Sources */,
+				3F0198DF20ADAB4400CF8696 /* AnnotationPersoon.swift in Sources */,
 				3F71A59720A02FB000D05FE0 /* AppDelegate.swift in Sources */,
 				3F71A5C720A0357E00D05FE0 /* Persoon.swift in Sources */,
-				3F459FE220AA04400051A244 /* ViewControllerFotoScherm.swift in Sources */,
 				3F4B7BDF20A5A22600ABD1E1 /* TableViewController.swift in Sources */,
 				3F71A5C520A02FF000D05FE0 /* Adress.swift in Sources */,
-				3F459FE420AA04520051A244 /* ViewControllerMapScherm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
