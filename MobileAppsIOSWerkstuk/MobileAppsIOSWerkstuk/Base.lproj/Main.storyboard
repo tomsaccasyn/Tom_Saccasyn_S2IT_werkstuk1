@@ -262,6 +262,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="PbN-GB-L7w"/>
         <segue reference="x9o-8j-U7a"/>
     </inferredMetricsTieBreakers>
 </document>

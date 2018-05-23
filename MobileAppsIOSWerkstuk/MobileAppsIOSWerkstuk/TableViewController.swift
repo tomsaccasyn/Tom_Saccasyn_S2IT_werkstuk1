@@ -10,8 +10,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
     var Personen = [Persoon]();
-    var p1 = Persoon(naam: "Hogeschool Brussel", voornaam: "Erasmus" , foto: "ehb" , address: Adress(straat: "Nijverheidskaai" , huisnummer: 170 , postcode: 1070 , gemeente: "Brussel") , telefoonnummer: 04759949 , latitude: 50.841778 , longitude: 4.322869);
-    var p2 = Persoon(naam: "Zuid" , voornaam: "Brussel" , foto: "brusselzuid" , address: Adress(straat: "Avenue Fonsny" , huisnummer: 47 , postcode: 1060 , gemeente: "Brussel") , telefoonnummer: 0411111111 , latitude: 50.836174 , longitude: 4.335685);
+    var p1 = Persoon(naam: "Hazard", voornaam: "Eden" , foto: "edenhazard" , address: Adress(straat: "Nijverheidskaai" , huisnummer: 170 , postcode: 1070 , gemeente: "Brussel") , telefoonnummer: 04759949 , latitude: 50.841778 , longitude: 4.322869);
+    var p2 = Persoon(naam: "Jean-Marie" , voornaam: "Pfaff" , foto: "jeanmarie" , address: Adress(straat: "Avenue Fonsny" , huisnummer: 47 , postcode: 1060 , gemeente: "Brussel") , telefoonnummer: 0411111111 , latitude: 50.836174 , longitude: 4.335685);
     
     
     override func viewDidLoad() {
