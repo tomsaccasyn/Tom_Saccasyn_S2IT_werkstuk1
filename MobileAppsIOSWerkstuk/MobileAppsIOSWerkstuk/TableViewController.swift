@@ -15,12 +15,13 @@ class TableViewController: UITableViewController {
     
     var p2 = Persoon(naam: "Pfaff", voornaam: "Jean-Marie", foto: "jeanmarie", address: Adress(straat: "Avenue Fosny", huisnummer: 47, postcode: 1060, gemeente: "Brussel"), telefoonnummer: 041111111111, latitude: 50.836787, longitude: 4.335394)
     
-    
+    var p3 = Persoon(naam:"Saccasyn",voornaam:"Tom",foto:"SaccasynTom",address: Adress(straat:"Birminghamstraat", huisnummer: 112, postcode:1070,gemeente:"Anderlecht"),telefoonnummer:043333333333,latitude:50.844525,longitude:4.322712)
     override func viewDidLoad() {
         super.viewDidLoad()
 
         Personen.append(p1)
         Personen.append(p2)
+        Personen.append(p3)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
